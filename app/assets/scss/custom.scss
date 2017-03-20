@@ -1,0 +1,291 @@
+@import "bootstrap/bootstrap-sprockets.scss";
+@import "bootstrap/bootstrap";
+@import "font-awesome/font-awesome.scss";
+@import "dripicons/dripicons";
+@import "animate/animate.scss";
+@import "magnific-popup/magnific-popup.scss";
+@import 'variables';
+@import 'mixins';
+
+html, body{
+  height:100%;
+}
+
+//altura do topo: 55px;
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.8em;
+  color:#282828;
+  overflow-x: hidden;
+}
+
+.form-control {
+  color: $body-text-color;
+  height: 45px;
+  background-color: $dark-transparent-hover;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+input[type=checkbox], input[type=radio] {
+  margin: 8px 0 0;
+}
+
+/* ==================================================
+  elements
+  ====================================================*/
+
+  a {
+    color:$body-link-color;
+    @include transition-all(all .3s ease-in-out);
+    &:hover {
+      text-decoration:none;
+      color:$body-link-color;
+    }
+  }
+
+  hr {
+    margin:10px 0;
+    border-top: 1px solid $white-transparent-hover;
+  }
+
+  .section {
+    position:relative;
+    min-height:100%;
+    padding:100px 0 100px;
+  }
+
+  .rounded {
+    @include border-radius(0px);
+  }
+
+  .circle {
+    @include border-radius (100%)
+  }
+
+  .rounded {
+    @include border-radius(4px);
+  }
+
+/* ==================================================
+  static-background
+  ====================================================*/
+
+ //  .static-background {
+ //   background: url(../images/bg-site.jpg) no-repeat center center fixed rgba(255,255,255,0.2);
+ //   @include background-cover();
+ // }
+
+/* ==================================================
+  navbar
+  ====================================================*/
+
+  .navbar{
+    border: none;
+    border-radius: 0;
+    max-height: 55px;
+  }
+
+  .navbar-nav > li > a {
+    line-height: 45px;
+  }
+
+  .navbar-default {
+    background-color: $black-dark;
+    border-color: #e7e7e7;
+  }
+
+  .navbar-inverse {
+    @include transition-all(all .5s ease-in-out);
+    background:rgba(black,0.7);
+
+    .navbar-nav {
+      li {
+        a {
+          color: white;
+          &:hover, &.active {
+            font-weight:bold;
+            background:transparent;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width:1200px) {
+    .navbar-inverse {
+      border: none;
+      padding: 20px 0;
+      background:transparent;
+      .navbar-nav {
+        li {
+          a {
+            color:white;
+            &:hover {
+              font-weight:700;
+              background:transparent;
+            }
+          }
+        }
+      }
+    }
+    .navbar-scroll {
+      padding:5px 0;
+      background:rgba(black,0.7);
+
+      li {
+        a {
+          color:$body-text-color;
+          &:hover, &.active {
+            font-weight:bold;
+            background:transparent;
+          }
+        }
+      }
+    }
+  }
+
+
+
+/* ==================================================
+  navbar-collapse
+  ====================================================*/
+
+  @media (max-width: 991px) {
+    .navbar-header {
+      float: none;
+    }
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 $white-transparent;
+    }
+    .navbar-collapse.collapse {
+      display: none!important;
+    }
+    .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+      float: none;
+    }
+    .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .navbar-text {
+      float: none;
+      margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+      display: block!important;
+    }
+    .collapsing {
+      overflow: hidden!important;
+    }
+  }
+
+
+/* ==================================================
+  footer
+  ====================================================*/
+
+  #footer {
+    background:rgba($black-dark,0.7);
+    text-align:center;
+    padding:20px 0;
+  }
+
+
+/* ==================================================
+  modal-theme
+  ====================================================*/
+
+  .modal-theme {
+    background: rgba(0,0,0,0.7);
+    .modal-content {
+      background:#000;
+      @include border-radius(4px);
+      .modal-header {
+        border-bottom: 1px solid #333;
+        .close {
+          opacity: 1;
+          font-size: 40px;
+          text-shadow: none;
+          color: $body-text-color;
+        }
+      }
+      .modal-footer {
+        border-top: 1px solid #333;
+      }
+    }
+
+  }
+
+/* ==================================================
+  preloader
+  ====================================================*/
+
+  #preloader {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:$body-text-color; /* change if the mask should have another color then white */
+    z-index:1040; /* makes sure it stays on top */
+  }
+
+  #status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../images/loading.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+  }
+
+
+/* ==================================================
+  scrollToTop
+  ==================================================== */
+
+  .scrollToTop{
+    width:42px;
+    height:42px;
+    padding: 8px 10px;
+    text-align:center;
+    font-weight: bold;
+    color: $body-text-color;
+    text-decoration: none;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    display:none;
+    cursor: pointer;
+    border:none;
+    background-color:$dark-transparent-hover;
+    z-index: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    @include transition-all(all .2s ease-in-out);
+    @include border-radius (50px);
+    &:hover,
+    &:visited,
+    &:focus {
+      text-decoration:none;
+      background-color:#000;
+      color:$body-text-color;
+    }
+    i {
+      line-height:24px;
+    }
+  }

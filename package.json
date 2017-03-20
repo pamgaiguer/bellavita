@@ -1,12 +1,12 @@
 {
-  "name": "bellavitamusica",
+  "name": "bellavita",
   "version": "1.0.0",
-  "description": "site bella vita musica",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "description": "site bellavita ",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "minify": "gulp minify"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,16 @@
   },
   "author": "pamella gaiguer",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/pamgaiguer/bellavita#readme"
+  "homepage": "https://bitbucket.org/pamgaiguer/bellavita#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-install": "^0.6.0"
+  }
 }

@@ -1,0 +1,90 @@
+//global variables
+
+$body-text-color:#282828;
+$body-link-color:#F1F1F1;
+
+$white-transparent:rgba(255,255,255,0.1);
+$white-transparent-hover:rgba(255,255,255,0.3);
+
+$dark-transparent:rgba(0,0,0,0.3);
+$dark-transparent-hover:rgba(0,0,0,0.5);
+
+$black-dark: #2d2d2d;
+$white: #fff;
+$gray-less: #8a8a8a;
+$white-minor: #f0f0f0;
+$dark-marine: #353f41;
+
+.spacing{
+  padding-bottom:10px;
+}
+
+.font-light{
+  font-weight: 300;
+}
+.font-regular{
+  font-weight: 400;
+}
+.font-medium{
+  font-weight: 500;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-bold{
+  font-weight: 700;
+}
+.font-extrabold{
+  font-weight: 800;
+}
+.font-black{
+  font-weight: 900;
+}
+.font-italic{
+  font-style: italic !important;
+}
+.font-10{
+  font-size: 10px;
+}
+.font-12{
+  font-size: 12px;
+}
+.font-14{
+  font-size: 14px;
+}
+.font-15{
+  font-size: 15px;
+}
+.line-height-15{
+  line-height: 1.5;
+}
+.font-16{
+  font-size: 16px;
+}
+.font-17{
+  font-size: 17px;
+}
+.line-17{
+  line-height: 17px;
+}
+.font-18{
+  font-size: 18px;
+}
+.font-20{
+  font-size: 20px;
+}
+.font-26{
+  font-size: 26px;
+}
+.font-30{
+  font-size: 30px;
+}
+.font-40{
+  font-size: 40px;
+}
+.font-46{
+  font-size: 46px;
+}
+.font-50{
+  font-size: 50px;
+}
