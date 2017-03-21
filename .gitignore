@@ -1,3 +1,4 @@
 node_modules/
 node_modules/*
-app/assets/.sass-cache
+app/.sass-cache/
+app/.sass-cache/*

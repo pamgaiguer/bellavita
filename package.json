@@ -1,7 +1,7 @@
 {
-  "name": "bellavita",
+  "name": "blogoespigadojapa",
   "version": "1.0.0",
-  "description": "site bellavita ",
+  "description": "site do bloco espiga do japa",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/pamgaiguer/bellavita.git"
+    "url": "git+ssh://git@bitbucket.org/pamgaiguer/blogoespigadojapa.git"
   },
   "author": "pamella gaiguer",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/pamgaiguer/bellavita#readme",
+  "homepage": "https://bitbucket.org/pamgaiguer/blogoespigadojapa#readme",
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "del": "^2.2.2",

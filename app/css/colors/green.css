@@ -1,0 +1,71 @@
+/* green #9C3 */
+
+a {
+	color: #9C3
+}
+
+.separator {
+	background:#9C3 !important; 	
+}
+
+.services.style1:hover i {
+	color:#9C3
+}
+
+.services.style2 i {
+	color:#9C3
+}
+
+
+
+.scrollToTop {
+	background-color:#9C3 !important;
+}
+
+.navbar-toggle {
+	background-color:#9C3 !important;
+}	
+
+
+
+
+/*** Works on common browsers ***/
+::selection {
+    background-color:#9C3 !important;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color:#9C3 !important;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color:#9C3 !important;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color:#9C3 !important;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color:#9C3 !important;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
