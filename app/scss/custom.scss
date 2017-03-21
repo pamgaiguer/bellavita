@@ -19,7 +19,12 @@ body {
   line-height: 1.8em;
   color: $gray-less;
   overflow-x: hidden;
-  background: $white-minor;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .form-control {
@@ -34,250 +39,262 @@ input[type=checkbox], input[type=radio] {
 }
 
 /* ==================================================
-  elements
-  ====================================================*/
+elements
+====================================================*/
 
-  a {
+a {
+  color:$body-link-color;
+  @include transition-all(all .3s ease-in-out);
+  &:hover {
+    text-decoration:none;
     color:$body-link-color;
-    @include transition-all(all .3s ease-in-out);
-    &:hover {
-      text-decoration:none;
-      color:$body-link-color;
-    }
   }
+}
 
-  hr {
-    margin:10px 0;
-    border-top: 1px solid $white-transparent-hover;
-  }
+hr {
+  margin:10px 0;
+  border-top: 1px solid $white-transparent-hover;
+}
 
-  .section {
-    position:relative;
-    min-height:100%;
-    padding:100px 0 100px;
-  }
+.section {
+  position:relative;
+  min-height:100%;
+  padding:100px 0 100px;
+}
 
-  .rounded {
-    @include border-radius(0px);
-  }
+.rounded {
+  @include border-radius(0px);
+}
 
-  .circle {
-    @include border-radius (100%)
-  }
+.circle {
+  @include border-radius (100%)
+}
 
-  .rounded {
-    @include border-radius(4px);
-  }
+.rounded {
+  @include border-radius(4px);
+}
 
 /* ==================================================
-  static-background
-  ====================================================*/
+static-background
+====================================================*/
 
- //  .static-background {
- //   background: url(../images/bg-site.jpg) no-repeat center center fixed rgba(255,255,255,0.2);
- //   @include background-cover();
- // }
+//  .static-background {
+//   background: url(../images/bg-site.jpg) no-repeat center center fixed rgba(255,255,255,0.2);
+//   @include background-cover();
+// }
 
 /* ==================================================
-  navbar
-  ====================================================*/
+navbar
+====================================================*/
 
-  .navbar{
-    border: none;
-    border-radius: 0;
-    max-height: 85px;
-    height: 75px;
-    margin-bottom: 0;
+.navbar{
+  border: none;
+  border-radius: 0;
+  max-height: 85px;
+  height: 75px;
+  margin-bottom: 0;
 
-    .navbar-brand{
-      margin-right: 15px;
-    }
+  .navbar-brand{
+    margin-right: 15px;
+  }
+}
+
+.navbar-default {
+  background-color: $black-dark;
+
+
+  & .navbar-collapse{
+    background: $black-dark;
   }
 
-  .navbar-default {
+  .navbar-nav > li > a {
+
+    color: $white;
+    line-height: 3;
     background-color: $black-dark;
 
-
-    & .navbar-collapse{
-      background: $black-dark;
-    }
-
-    .navbar-nav > li > a {
-
-      color: $white;
-      line-height: 3;
+    &:hover, &:active, &:focus{
+      color: white;
+      text-decoration: underline;
       background-color: $black-dark;
+    }
+  }
+}
 
-      &:hover, &:active, &:focus{
+.navbar-inverse {
+  @include transition-all(all .5s ease-in-out);
+  background:rgba(black,0.7);
+
+  .navbar-nav {
+    li {
+      a {
         color: white;
-        text-decoration: underline;
-        background-color: $black-dark;
+        &:hover, &.active {
+          background:transparent;
+        }
       }
     }
   }
+}
 
+@media (min-width:1200px) {
   .navbar-inverse {
-    @include transition-all(all .5s ease-in-out);
-    background:rgba(black,0.7);
-
+    border: none;
+    padding: 20px 0;
+    background:transparent;
     .navbar-nav {
       li {
         a {
-          color: white;
-          &:hover, &.active {
+          color:white;
+          &:hover {
+            font-weight:700;
             background:transparent;
           }
         }
       }
     }
   }
+  .navbar-scroll {
+    padding:5px 0;
+    background:rgba(black,0.7);
 
-  @media (min-width:1200px) {
-    .navbar-inverse {
-      border: none;
-      padding: 20px 0;
-      background:transparent;
-      .navbar-nav {
-        li {
-          a {
-            color:white;
-            &:hover {
-              font-weight:700;
-              background:transparent;
-            }
-          }
-        }
-      }
-    }
-    .navbar-scroll {
-      padding:5px 0;
-      background:rgba(black,0.7);
-
-      li {
-        a {
-          color:$body-text-color;
-          &:hover, &.active {
-            font-weight:bold;
-            background:transparent;
-          }
+    li {
+      a {
+        color:$body-text-color;
+        &:hover, &.active {
+          font-weight:bold;
+          background:transparent;
         }
       }
     }
   }
+}
 
 
 
 /* ==================================================
-  navbar-collapse
-  ====================================================*/
+navbar-collapse
+====================================================*/
 
 
 /* ==================================================
-  footer
-  ====================================================*/
+footer
+====================================================*/
 
-  #footer {
-    background:rgba($black-dark,0.7);
-    text-align:center;
-    padding:20px 0;
-  }
+#footer {
+  background:rgba($black-dark,0.7);
+  text-align:center;
+  padding:20px 0;
+}
 
 
 /* ==================================================
-  modal-theme
-  ====================================================*/
+modal-theme
+====================================================*/
 
-  .modal-theme {
-    background: rgba(0,0,0,0.7);
-    .modal-content {
-      background:#000;
-      @include border-radius(4px);
-      .modal-header {
-        border-bottom: 1px solid #333;
-        .close {
-          opacity: 1;
-          font-size: 40px;
-          text-shadow: none;
-          color: $body-text-color;
-        }
-      }
-      .modal-footer {
-        border-top: 1px solid #333;
+.modal-theme {
+  background: rgba(0,0,0,0.7);
+  .modal-content {
+    background:#000;
+    @include border-radius(4px);
+    .modal-header {
+      border-bottom: 1px solid #333;
+      .close {
+        opacity: 1;
+        font-size: 40px;
+        text-shadow: none;
+        color: $body-text-color;
       }
     }
-
-  }
-
-/* ==================================================
-  preloader
-  ====================================================*/
-
-  #preloader {
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:$body-text-color; /* change if the mask should have another color then white */
-    z-index:1040; /* makes sure it stays on top */
-  }
-
-  #status {
-    width:200px;
-    height:200px;
-    position:absolute;
-    left:50%; /* centers the loading animation horizontally one the screen */
-    top:50%; /* centers the loading animation vertically one the screen */
-    background-image:url(../images/loading.gif); /* path to your loading animation */
-    background-repeat:no-repeat;
-    background-position:center;
-    margin:-100px 0 0 -100px; /* is width and height divided by two */
-  }
-
-
-/* ==================================================
-  scrollToTop
-  ==================================================== */
-
-  .scrollToTop{
-    width:42px;
-    height:42px;
-    padding: 8px 10px;
-    text-align:center;
-    font-weight: bold;
-    color: $body-text-color;
-    text-decoration: none;
-    position:fixed;
-    bottom:10px;
-    right:10px;
-    display:none;
-    cursor: pointer;
-    border:none;
-    background-color:$dark-transparent-hover;
-    z-index: 1000;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    @include transition-all(all .2s ease-in-out);
-    @include border-radius (50px);
-    &:hover,
-    &:visited,
-    &:focus {
-      text-decoration:none;
-      background-color:#000;
-      color:$body-text-color;
-    }
-    i {
-      line-height:24px;
+    .modal-footer {
+      border-top: 1px solid #333;
     }
   }
 
+}
+
 /* ==================================================
-  Styles for website
-  ==================================================== */
+preloader
+====================================================*/
+
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:$body-text-color; /* change if the mask should have another color then white */
+  z-index:1040; /* makes sure it stays on top */
+}
+
+#status {
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:50%; /* centers the loading animation horizontally one the screen */
+  top:50%; /* centers the loading animation vertically one the screen */
+  background-image:url(../images/loading.gif); /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+
+/* ==================================================
+scrollToTop
+==================================================== */
+
+.scrollToTop{
+  width:42px;
+  height:42px;
+  padding: 8px 10px;
+  text-align:center;
+  font-weight: bold;
+  color: $body-text-color;
+  text-decoration: none;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  display:none;
+  cursor: pointer;
+  border:none;
+  background-color:$dark-transparent-hover;
+  z-index: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  @include transition-all(all .2s ease-in-out);
+  @include border-radius (50px);
+  &:hover,
+  &:visited,
+  &:focus {
+    text-decoration:none;
+    background-color:#000;
+    color:$body-text-color;
+  }
+  i {
+    line-height:24px;
+  }
+}
+
+/* ==================================================
+Styles for website
+==================================================== */
 
 #bg-bellavita{
   background-image: url('../images/main-image.png');
-  background-size: cover;
+  background-size: contain;
   width: 1200px;
   height: 990px;
+}
+.biography{
+  background: $white-minor;
+  color: $gray-less;
+}
+.calendar{
+  background-image: url('../images/fundo-agenda.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 971px;
+  height: 715px;
 }

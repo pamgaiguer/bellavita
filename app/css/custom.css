@@ -11803,8 +11803,12 @@ body {
   font-size: 14px;
   line-height: 1.8em;
   color: #8a8a8a;
-  overflow-x: hidden;
-  background: #f0f0f0; }
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
 
 .form-control {
   color: #282828;
@@ -11816,8 +11820,8 @@ input[type=checkbox], input[type=radio] {
   margin: 8px 0 0; }
 
 /* ==================================================
-  elements
-  ====================================================*/
+elements
+====================================================*/
 a {
   color: #F1F1F1;
   -webkit-transition: all 0.3s ease-in-out;
@@ -11856,11 +11860,11 @@ hr {
   border-radius: 4px; }
 
 /* ==================================================
-  static-background
-  ====================================================*/
+static-background
+====================================================*/
 /* ==================================================
-  navbar
-  ====================================================*/
+navbar
+====================================================*/
 .navbar {
   border: none;
   border-radius: 0;
@@ -11914,19 +11918,19 @@ hr {
         background: transparent; } }
 
 /* ==================================================
-  navbar-collapse
-  ====================================================*/
+navbar-collapse
+====================================================*/
 /* ==================================================
-  footer
-  ====================================================*/
+footer
+====================================================*/
 #footer {
   background: rgba(45, 45, 45, 0.7);
   text-align: center;
   padding: 20px 0; }
 
 /* ==================================================
-  modal-theme
-  ====================================================*/
+modal-theme
+====================================================*/
 .modal-theme {
   background: rgba(0, 0, 0, 0.7); }
   .modal-theme .modal-content {
@@ -11946,8 +11950,8 @@ hr {
       border-top: 1px solid #333; }
 
 /* ==================================================
-  preloader
-  ====================================================*/
+preloader
+====================================================*/
 #preloader {
   position: fixed;
   top: 0;
@@ -11975,8 +11979,8 @@ hr {
   /* is width and height divided by two */ }
 
 /* ==================================================
-  scrollToTop
-  ==================================================== */
+scrollToTop
+==================================================== */
 .scrollToTop {
   width: 42px;
   height: 42px;
@@ -12011,10 +12015,22 @@ hr {
     line-height: 24px; }
 
 /* ==================================================
-  Styles for website
-  ==================================================== */
+Styles for website
+==================================================== */
 #bg-bellavita {
   background-image: url("../images/main-image.png");
-  background-size: cover;
+  background-size: contain;
   width: 1200px;
   height: 990px; }
+
+.biography {
+  background: #f0f0f0;
+  color: #8a8a8a; }
+
+.calendar {
+  background-image: url("../images/fundo-agenda.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 971px;
+  height: 715px; }
