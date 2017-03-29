@@ -11952,32 +11952,6 @@ modal-theme
 /* ==================================================
 preloader
 ====================================================*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #282828;
-  /* change if the mask should have another color then white */
-  z-index: 1040;
-  /* makes sure it stays on top */ }
-
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  background-image: url(../images/loading.gif);
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */ }
-
 /* ==================================================
 scrollToTop
 ==================================================== */
@@ -12019,18 +11993,24 @@ Styles for website
 ==================================================== */
 #bg-bellavita {
   background-image: url("../images/main-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
-  width: 1200px;
-  height: 990px; }
+  height: 990px;
+  margin: 0 auto; }
+
+.home-topo {
+  min-height: 0; }
 
 .biography {
   background: #f0f0f0;
-  color: #8a8a8a; }
+  color: #8a8a8a;
+  min-height: 0; }
 
 .calendar {
   background-image: url("../images/fundo-agenda.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
-  width: 971px;
-  height: 715px; }
+  background-position: center center;
+  height: 715px;
+  margin: 0 auto; }
