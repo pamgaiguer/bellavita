@@ -348,10 +348,24 @@ Styles for website
     }
   }
 }
-#owners{
+#owners, #photos{
   background: $white-minor;
 }
 
+
+#photos{
+
+  p{
+    a{
+      color: $body-text-color;
+
+      &:hover, &:focus{
+        color: $body-text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
 #footer {
   background:rgba($black-dark,0.7);
   padding: 40px 0 50px;

@@ -70,18 +70,18 @@
       var campo_data = $("#f_date").val();
       var campo_msg = $("#f_text").val();
 
-      // if(campo_nome.length <= 3){
-      //   alert('Informe seu nome');
-      //   return false;
-      // }
-      // if(campo_email.length <= 5){
-      //   alert('Informe seu email');
-      //   return false;
-      // }
-      // if(campo_msg.length <= 5){
-      //   alert('Escreva uma mensagem');
-      //   return false;
-      // }
+      if(campo_nome.length <= 3){
+        alert('Informe seu nome');
+        return false;
+      }
+      if(campo_email.length <= 5){
+        alert('Informe seu email');
+        return false;
+      }
+      if(campo_msg.length <= 5){
+        alert('Escreva uma mensagem');
+        return false;
+      }
 
       $.ajax({
         url: '../mail.php',

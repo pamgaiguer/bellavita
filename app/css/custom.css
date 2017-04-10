@@ -12062,8 +12062,14 @@ Styles for website
         .informations .box-gray .text a:hover, .informations .box-gray .text a:focus {
           color: #2d2d2d; }
 
-#owners {
+#owners, #photos {
   background: #f0f0f0; }
+
+#photos p a {
+  color: #282828; }
+  #photos p a:hover, #photos p a:focus {
+    color: #282828;
+    text-decoration: underline; }
 
 #footer {
   background: rgba(45, 45, 45, 0.7);
