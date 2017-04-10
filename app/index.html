@@ -168,43 +168,56 @@
                   Moramos todos em São Paulo, mas isso não nos
                   impede de irmos para qualquer lugar do mundo.
                 </p>
+                <div class="spacing"></div>
+                <div class="spacing"></div>
+                <h3 class="title">Telefones</h3>
+                <div class="spacing"></div>
+                <div class="title-bar"></div>
+                <div class="spacing"></div>
+                <p class="text"><i class="fa fa-whatsapp" aria-hidden="true"></i> <a href="tel:+5511997884688">(11) 99788-4688</a></p>
+                <p class="text"><i class="fa fa-whatsapp" aria-hidden="true"></i> <a href="tel:+5511973706665">(11) 97370-6665</a></p>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div class="box-info box-gray">
 
+<div id="retornoHTML">
                 <div class="form-group">
                   <label>Nome (obrigatório)</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" required id="f_name">
                 </div>
 
                 <div class="form-group">
                   <label>E-mail</label>
-                  <input type="email" class="form-control" required>
+                  <input type="email" class="form-control" required id="f_mail">
                 </div>
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
                       <label>Telefone (opcional)</label>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control sp_celphones" id="f_phone" maxlength="15">
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
                       <label>Data do evento (opcional)</label>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control date" id="f_date">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Sua mensagem</label>
-                  <textarea cols="30" rows="5" class="form-control"></textarea>
+                  <textarea cols="30" rows="5" class="form-control" id="f_text" required></textarea>
                 </div>
                 <div class="spacing"></div>
+
                 <div class="form-group">
-                  <button class="btn btn-default" onclick="alert('Em breve!');">Enviar</button>
+                  <button class="btn btn-default pull-right" id="f_submit">Enviar</button>
+                  <div class="clearfix"></div>
                 </div>
+
+</div>
 
               </div>
             </div>
@@ -261,9 +274,6 @@
             Bella Vita Musica
           </p>
           <div class="spacing"></div>
-
-
-
         </div>
       </div>
     </div>
@@ -274,6 +284,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
   <script src="js/main.js"></script>
 
 </body>

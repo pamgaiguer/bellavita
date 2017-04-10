@@ -277,7 +277,7 @@ Styles for website
 
   .box-info{
     margin-top: 150px;
-    height: 550px;
+    height: 600px;
   }
 
   .box-black{
@@ -303,6 +303,14 @@ Styles for website
     .text{
       font-size: 20px;
       text-align: center;
+
+      a{
+        &:hover, &:focus{
+          text-decoration: underline;
+          color: $body-link-color;
+
+        }
+      }
     }
   }
 

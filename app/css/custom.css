@@ -12015,7 +12015,7 @@ Styles for website
   margin: 0 auto; }
   .informations .box-info {
     margin-top: 150px;
-    height: 550px; }
+    height: 600px; }
   .informations .box-black {
     background-image: url("../images/fundo-bio.png");
     background-repeat: no-repeat;
@@ -12036,6 +12036,9 @@ Styles for website
     .informations .box-black .text {
       font-size: 20px;
       text-align: center; }
+      .informations .box-black .text a:hover, .informations .box-black .text a:focus {
+        text-decoration: underline;
+        color: #F1F1F1; }
   .informations .box-gray {
     background-color: #F1F1F1;
     color: black;
