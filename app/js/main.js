@@ -62,46 +62,51 @@
     $('.date').mask('00/00/0000');
 
 
-    $('#f_submit').click(function() {
-      var $requestResult = $("#retornoHTML");
-      var campo_nome =  $("#f_name").val();
-      var campo_email =  $("#f_mail").val();
-      var campo_telefone = $("#f_phone").val();
-      var campo_data = $("#f_date").val();
-      var campo_msg = $("#f_text").val();
+    $('#f_submit').click(function(e) {
+      e.preventDefault();
 
-      if(campo_nome.length <= 3){
+      var $requestResult = $("#retornoHTML");
+      var nome =  $("#name").val();
+      var email =  $("#email").val();
+      var phone = $("#phone").val();
+      var date = $("#date").val();
+      var message = $("#message").val();
+
+      if(nome.length <= 3){
         alert('Informe seu nome');
+        console.log('nao preencheu campo nome');
         return false;
       }
-      if(campo_email.length <= 5){
+      if(email.length <= 5){
         alert('Informe seu email');
+        console.log('nao preencheu campo email');
         return false;
       }
-      if(campo_msg.length <= 5){
+      if(message.length <= 5){
         alert('Escreva uma mensagem');
+        console.log('nao preencheu campo mensagem');
         return false;
       }
 
       $.ajax({
-        url: '../mail.php',
+        url: '/mail.php/',
         type: 'POST',
         data: {
-          name: $("#f_name").val(),
-          e_mail: $("#f_mail").val(),
-          phone: $("#f_phone").val(),
-          date: $("#f_date").val(),
-          msg: $("#f_text").val(),
+          name: $("#name").val(),
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          date: $("#date").val(),
+          message: $("#message").val(),
         },
-        error: function() {
-          console.log("Deu erro!");
+        error: function(data) {
+          console.log("Deu erro!", data);
           $requestResult.append($("<div>", {
             "class": "alert alert-danger",
             "text": "E-mail não enviado!"
           }));
         },
-        success: function(msg){
-          console.log("Enviado com sucesso!");
+        success: function(data){
+          console.log("Enviado com sucesso!", data);
           $requestResult.append($("<div>", {
             "class": "alert alert-success",
             "text": "E-mail enviado com sucesso."

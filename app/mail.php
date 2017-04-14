@@ -1,34 +1,30 @@
 <?php
-
-$quebra_linha = "\n";
-$emailsender = "bv@bellavitamusica.com.br";
-$emaildestinatario = "bv@bellavitamusica.com.br";
-$assunto = "Bella Vita Musica - Enviado pelo Site";
-
 $name = $_POST['name'];
-$e_mail = $_POST['e_mail'];
+$email = $_POST['email'];
 $phone = $_POST['phone'];
 $date = $_POST['date'];
-$msg = $_POST['msg'];
+$message = $_POST['message'];
 
-//montando email
-$mensagemHTML = '<h3><strong>E-mail enviado pelo site:</strong></h3>
-<p>Nome: '.$name.'</p>
-<p>E-mail: '.$e_mail.'</p>
-<p>Telefone:'.$phone.'</p>
-<p>Data do evento: '.$date.'</p>
-<p>Mensagem: '.$msg.'</p>';
+$subject = 'Bella Vita - Email enviado pelo Site';
 
-echo $name, $date, $e_mail, $phone, $msg;
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
 
-$headers  = "MIME-Version: 1.1".$quebra_linha;
-$headers .= "Content-type: text/html; charset=utf-8".$quebra_linha;
-$headers .= "From: ".$emailsender.$quebra_linha;
-$headers .= "Return-Path: ".$emailsender.$quebra_linha;
-$headers .= "Replay-To: ".$emailsender.$quebra_linha;
+$corpo = "Formulario enviado\n";
+$corpo .= "Nome: " . $name . "\n";
+$corpo .= "Email: " . $email . "\n";
+$corpo .= "Telefone: " . $phone . "\n";
+$corpo .= "Data: " . $date . "\n";
+$corpo .= "Mensagem: " . $message . "\n";
 
-mail($emaildestinatario, $assunto, $mensagemHTML, $headers, "-r".$emailsender);
+$email_to = 'bv@bellavitamusica.com.br';
 
-print("Mensagem enviada com sucesso!")
+$status = mail($email_to, $subject, $corpo, $headers);
 
+if ($status) {
+  echo "<script> alert('Formulário enviado com sucesso!'); </script>";
+  var_dump($corpo);
+} else {
+  echo "<script> alert('Falha ao enviar o Formulário.'); </script>";
+}
 ?>
